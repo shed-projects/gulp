@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <!-- META -->
+        [% include 'assets/inc/_meta.ect', { page: 'SUB' } %]
+        <!-- /META -->
+    </head>
+
+    <body class="page-sub">
+        <!-- HEADER -->
+        <!--
+            { *** : ****} はインクルード先に渡す「パラメーター」。
+            ・目的はインクルードする内容を「そのページの時だけ変えたい」などなど
+            ・特に使わない場合は、省略も可能。
+            ・いくつでも渡すことが可能
+        -->
+        [% include 'assets/inc/_header.ect', { page: 'SUB' } %]
+        <!-- /HEADER -->
+
+
+        <div class="conts">
+            this is SUB
+        </div>
+    </body>
+</html>

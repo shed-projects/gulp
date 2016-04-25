@@ -1,0 +1,24 @@
+<header class="header">
+    <!-- 呼び出し先から@page変数を受け取って、表示させる -->
+    <h1>[%- @page %] HEADER</h1>
+
+    <!--
+        呼び出し先から@page変数を受け取り、
+        それを元に現在地classをつけることもできる
+
+        ・アイデア次第では、今までわざわざjsでやったことも、js使わずに再現できる
+        （jsの処理負担を下げることができる）
+        ・if/else文などの分岐処理もできる
+    -->
+    <ul class="gNav">
+        <!-- @pageに'TOP'が入ってきたら、このliに「-current」クラスを追加 -->
+        <li class="[% if @page is 'TOP': %]-current[% end %]">
+            <a href="/">TOP PAGE →</a>
+        </li>
+
+        <!-- @pageに'SUB'が入ってきたら、このliに「-current」クラスを追加 -->
+        <li class="[% if @page is 'SUB': %]-current[% end %]">
+            <a href="/sub.html">SUB PAGE →</a>
+        </li>
+    </ul>
+</header>

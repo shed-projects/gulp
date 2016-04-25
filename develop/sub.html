@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <!-- META -->
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!-- 呼び出し先から@page変数を受け取って、表示させる -->
+<title>SUB TITLE</title>
+<meta name="keywords" content="keywords" />
+<meta name="description" content="description" />
+<link rel="stylesheet" href="/assets/css/common.css">
+<!--
+    呼び出し先から@page変数を受け取り、
+    それを元に読みませるファイルを分岐させたりも
+-->
+    <!-- TOPでなく、SUBの場合はsub.cssを読む -->
+    <link rel="stylesheet" href="/assets/css/sub.css">
+        <!-- /META -->
+    </head>
+
+    <body class="page-sub">
+        <!-- HEADER -->
+        <!--
+            { *** : ****} はインクルード先に渡す「パラメーター」。
+            ・目的はインクルードする内容を「そのページの時だけ変えたい」などなど
+            ・特に使わない場合は、省略も可能。
+            ・いくつでも渡すことが可能
+        -->
+        <header class="header">
+    <!-- 呼び出し先から@page変数を受け取って、表示させる -->
+    <h1>SUB HEADER</h1>
+
+    <!--
+        呼び出し先から@page変数を受け取り、
+        それを元に現在地classをつけることもできる
+
+        ・アイデア次第では、今までわざわざjsでやったことも、js使わずに再現できる
+        （jsの処理負担を下げることができる）
+        ・if/else文などの分岐処理もできる
+    -->
+    <ul class="gNav">
+        <!-- @pageに'TOP'が入ってきたら、このliに「-current」クラスを追加 -->
+        <li class="">
+            <a href="/">TOP PAGE →</a>
+        </li>
+
+        <!-- @pageに'SUB'が入ってきたら、このliに「-current」クラスを追加 -->
+        <li class="-current">
+            <a href="/sub.html">SUB PAGE →</a>
+        </li>
+    </ul>
+</header>
+        <!-- /HEADER -->
+
+
+        <div class="conts">
+            this is SUB
+        </div>
+    </body>
+</html>

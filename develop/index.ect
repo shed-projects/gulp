@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <!-- META -->
+        [% include 'assets/inc/_meta.ect', { page: 'TOP' } %]
+        <!-- /META -->
+    </head>
+
+    <body class="page-top">
+        <!-- HEADER -->
+        <!--
+            { *** : ****} はインクルード先に渡す「パラメーター」。
+            ・目的はインクルードする内容を「そのページの時だけ変えたい」などなど
+            ・特に使わない場合は、省略も可能。
+            ・いくつでも渡すことが可能
+        -->
+        [% include 'assets/inc/_header.ect', { page: 'TOP' } %]
+        <!-- /HEADER -->
+
+
+        <div class="conts">
+            this is TOP
+        </div>
+    </body>
+</html>
